@@ -100,7 +100,7 @@ costo total
 
 - ¿Cómo se agrupa la informacion relevante?
 
-![Captura de pantalla 2026-03-01 201536.png](../../../Im%C3%A1genes/Screenshots/Captura%20de%20pantalla%202026-03-01%20201536.png)
+![img_2.png](img_2.png)
 
 ---
 - ¿Que funcionalidades se nesesitam?
@@ -137,7 +137,7 @@ calcular total
 
 - ¿Cómo se distribuyen las funcionalidades?
 
-![Captura de pantalla 2026-03-01 222527.png](../../../Im%C3%A1genes/Screenshots/Captura%20de%20pantalla%202026-03-01%20222527.png)
+![img_1.png](img_1.png)
 
 ---
 
