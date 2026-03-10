@@ -1,5 +1,6 @@
 package co.edu.uniquindio.poo.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Bicicleta {
@@ -11,7 +12,7 @@ public class Bicicleta {
     private ArrayList<OrdenServicio> listaOrdenesServicios;
     private Cliente cliente;
 
-    private Bicicleta(String marca, String serial, String color){
+    public Bicicleta(String marca, String serial, String color){
         this.marca= marca;
         this.serial= serial;
         this.color=color;
@@ -89,5 +90,17 @@ public class Bicicleta {
             }
         }
         return bandera;
+    }
+
+    public void agregarOrden(OrdenServicio orden) {
+        listaOrdenesServicios.add(orden);
+    }
+
+    public void mostrarOrdenes() {
+
+        for(OrdenServicio orden : listaOrdenesServicios){
+            System.out.println(orden);
+        }
+
     }
 }

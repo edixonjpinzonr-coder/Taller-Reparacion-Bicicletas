@@ -18,8 +18,8 @@ public class OrdenServicio {
     private ArrayList<Repuesto> listaRepuestos;
     private Taller ownedByTaller;
 
-    public OrdenServicio(String codigo, String descirpcion, LocalDate fechaIngreso,
-                         LocalDate fechaSalida, double costo, EstadoOrden estadoOrden, Taller ownedByTaller) {
+    public OrdenServicio(String codigo, LocalDate fechaIngreso,
+                         EstadoOrden estadoOrden) {
         this.codigo = codigo;
         this.descirpcion = descirpcion;
         this.fechaIngreso = fechaIngreso;

@@ -112,4 +112,7 @@ public class Cliente {
                 ", listaOrdenesServicios=" + listaOrdenesServicios +
                 '}';
     }
+    public void asignarBicicleta(Bicicleta bicicleta){
+        listaBicicletas.add(bicicleta);
+    }
 }

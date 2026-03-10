@@ -151,6 +151,28 @@ public class Taller {
         return cantidad;
     }
 
+    public void bincularBicicletaCliente(Cliente cliente, Bicicleta bicicleta){
+        cliente.asignarBicicleta(bicicleta);
+    }
+    public void crearOrden(Bicicleta bici, String descripcion){
+        OrdenServicio orden= new OrdenServicio(descripcion, LocalDate.now(),EstadoOrden.RECIBIDA);
+        bici.agregarOrden(orden);
 
+    }
+
+    public String asignarMecanico(){
+        String resultado= "";
+        for(Mecanico Aux: listaMecanicos){
+            if(Aux!= null){
+
+            }
+
+        }
+
+
+
+
+        return resultado;
+    }
 
 }
