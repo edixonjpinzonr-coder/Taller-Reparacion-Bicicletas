@@ -11,7 +11,7 @@ public class Mecanico {
     private Taller ownedByTaller;
     private ArrayList<OrdenServicio> listaOrdenesServicios;
 
-    private Mecanico(String nombre,String salario, String telefono, String identificacion){
+    public Mecanico(String nombre,String salario, String telefono, String identificacion){
         this.identificacion= identificacion;
         this.nombre= nombre;
         this.salario= salario;

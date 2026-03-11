@@ -17,9 +17,10 @@ public class OrdenServicio {
     private Bicicleta bicicleta;
     private ArrayList<Repuesto> listaRepuestos;
     private Taller ownedByTaller;
+    private Mecanico mecanico;
 
     public OrdenServicio(String codigo, LocalDate fechaIngreso,
-                         EstadoOrden estadoOrden) {
+                         EstadoOrden estadoOrden, Taller ownedByTaller) {
         this.codigo = codigo;
         this.descirpcion = descirpcion;
         this.fechaIngreso = fechaIngreso;
@@ -32,7 +33,11 @@ public class OrdenServicio {
         this.cliente = cliente;
         this.listaRepuestos = listaRepuestos;
         this.ownedByTaller = ownedByTaller;
+        this.mecanico= mecanico;
     }
+    public Mecanico getMecanico(){ return mecanico;}
+
+    public void setMecanico(Mecanico mecanico){ this.mecanico= mecanico;}
 
     public EstadoOrden getEstadoOrden() {
         return estadoOrden;
@@ -158,4 +163,17 @@ public class OrdenServicio {
 
         return bandera;
     }
+
+    public void asignarMecanico(Mecanico mecanico){
+        this.mecanico=mecanico;
+    }
+
+    public void agregarTarea(Tarea tarea){
+        listaTareas.add(tarea);
+    }
+
+    public void agregarRepuesto(Repuesto repuesto){
+        listaRepuestos.add(repuesto);
+    }
+
 }

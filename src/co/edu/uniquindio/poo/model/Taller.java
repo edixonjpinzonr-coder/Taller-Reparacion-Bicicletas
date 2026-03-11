@@ -154,25 +154,14 @@ public class Taller {
     public void bincularBicicletaCliente(Cliente cliente, Bicicleta bicicleta){
         cliente.asignarBicicleta(bicicleta);
     }
-    public void crearOrden(Bicicleta bici, String descripcion){
-        OrdenServicio orden= new OrdenServicio(descripcion, LocalDate.now(),EstadoOrden.RECIBIDA);
+    public OrdenServicio crearOrden(Bicicleta bici, String descripcion){
+        OrdenServicio orden= new OrdenServicio(descripcion, LocalDate.now(),EstadoOrden.RECIBIDA,this);
         bici.agregarOrden(orden);
 
+        return orden;
+
     }
+    
 
-    public String asignarMecanico(){
-        String resultado= "";
-        for(Mecanico Aux: listaMecanicos){
-            if(Aux!= null){
-
-            }
-
-        }
-
-
-
-
-        return resultado;
-    }
 
 }
