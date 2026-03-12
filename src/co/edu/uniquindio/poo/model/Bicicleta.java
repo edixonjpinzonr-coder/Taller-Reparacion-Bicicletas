@@ -73,9 +73,9 @@ public class Bicicleta {
                 '}';
     }
 
-    public boolean obtenerSerial() {
+    public boolean obtenerSerial(String inicio) {
         boolean bandera= false;
-        if(serial.startsWith("5")){
+        if(serial.startsWith(inicio)){
             bandera= true;
         }
 
@@ -103,4 +103,17 @@ public class Bicicleta {
         }
 
     }
+
+    public boolean verificarSerialCapicua(String serial){
+        boolean bandera= true;
+        for(int i =0; i<serial.length()/2; i++) {
+            if (serial.charAt(i) != serial.charAt(serial.length()-1-i)) {
+                bandera= false;
+            }
+        }
+        return bandera;
+    }
+
+
+
 }

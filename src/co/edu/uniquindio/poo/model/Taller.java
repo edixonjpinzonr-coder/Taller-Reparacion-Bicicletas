@@ -139,11 +139,11 @@ public class Taller {
 
     }
 
-    public int obtenerCantidadBicicletas(){
+    public int obtenerCantidadBicicletas(String inicio){
         int cantidad= 0;
 
         for(Bicicleta bici: listaBicicletas){
-            if(bici.obtenerSerial()&& bici.identificarFecha()){
+            if(bici.obtenerSerial(inicio)&& bici.identificarFecha()){
                 cantidad++;
             }
         }
@@ -161,7 +161,16 @@ public class Taller {
         return orden;
 
     }
-    
+
+    public ArrayList<Bicicleta> obtenerListaSerial(String inicio) {
+        ArrayList<Bicicleta> serialInicial= new ArrayList<>();
+        for(Bicicleta bici: listaBicicletas){
+            if(bici.obtenerSerial(inicio)){
+                serialInicial.add(bici);
+            }
+        }
+        return serialInicial;
+    }
 
 
 }
